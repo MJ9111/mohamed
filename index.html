@@ -44,7 +44,7 @@
                 <i class="fa-solid fa-utensils text-amber-400 ml-1"></i> أهلاً بكم في مطعم محمد نور - البحرين
             </span>
             <h1 class="text-3xl sm:text-5xl font-extrabold mb-6 leading-tight">
-                في البحرين <span class="bg-gradient-to-r from-amber-600 to-amber-800 bg-clip-text text-transparent">طعم البخاري على أصوله .</span>
+                طعم البخاري على أصوله في <span class="bg-gradient-to-r from-amber-600 to-amber-800 bg-clip-text text-transparent">البحرين</span>
             </h1>
             <p class="text-slate-300 text-base sm:text-lg mb-8 max-w-2xl mx-auto leading-relaxed">
                 وخيارك المثالي للمشويات والأكل البخاري اللذيذ. خدمة سريعة، نظافة تامة، وجلسات مريحة بالدور الثاني تناسب جميع الأوقات. اطلب وجبتك الآن بسهولة وسرعة من خلال السلة التفاعلية ليصلك الطلب عبر الواتساب فوراً!
@@ -75,12 +75,12 @@
                         <img src="https://images.unsplash.com/photo-1598515214211-89d3c73ae83b?w=500" alt="دجاجة كاملة بالمكينة مع أرز" class="w-full h-40 object-cover">
                         <div class="p-4">
                             <h4 class="font-bold text-slate-800 text-sm">دجاجة كاملة بالمكينة مع أرز</h4>
-                            <p class="text-slate-500 text-xs mt-1">دجاجة كاملة مع أرز من اختيارك</p>
+                            <p class="text-slate-500 text-xs mt-1">دجاجة كاملة مع اختيارك من نوع الأرز</p>
                         </div>
                     </div>
                     <div class="p-4 pt-0 flex justify-between items-center">
                         <span class="font-bold text-amber-700 text-sm">BD 4.400</span>
-                        <button onclick="addToCart('دجاجة كاملة بالمكينة مع أرز', 4.400)" class="px-3 py-1.5 rounded-lg bg-amber-600 hover:bg-amber-700 text-white text-xs font-bold transition flex items-center gap-1">
+                        <button onclick="promptRiceOption('دجاجة كاملة بالمكينة مع أرز', 4.400)" class="px-3 py-1.5 rounded-lg bg-amber-600 hover:bg-amber-700 text-white text-xs font-bold transition flex items-center gap-1">
                             <i class="fa-solid fa-plus"></i> إضافة
                         </button>
                     </div>
@@ -91,12 +91,12 @@
                         <img src="https://images.unsplash.com/photo-1598515214211-89d3c73ae83b?w=500" alt="نصف دجاجة بالماكينة مع أرز" class="w-full h-40 object-cover">
                         <div class="p-4">
                             <h4 class="font-bold text-slate-800 text-sm">نصف دجاجة بالماكينة مع أرز</h4>
-                            <p class="text-slate-500 text-xs mt-1">نصف دجاجة مع أرز من اختيارك</p>
+                            <p class="text-slate-500 text-xs mt-1">نصف دجاجة مع اختيارك من نوع الأرز</p>
                         </div>
                     </div>
                     <div class="p-4 pt-0 flex justify-between items-center">
                         <span class="font-bold text-amber-700 text-sm">BD 2.200</span>
-                        <button onclick="addToCart('نصف دجاجة بالماكينة مع أرز', 2.200)" class="px-3 py-1.5 rounded-lg bg-amber-600 hover:bg-amber-700 text-white text-xs font-bold transition flex items-center gap-1">
+                        <button onclick="promptRiceOption('نصف دجاجة بالماكينة مع أرز', 2.200)" class="px-3 py-1.5 rounded-lg bg-amber-600 hover:bg-amber-700 text-white text-xs font-bold transition flex items-center gap-1">
                             <i class="fa-solid fa-plus"></i> إضافة
                         </button>
                     </div>
@@ -107,12 +107,12 @@
                         <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=500" alt="دجاجة كاملة مشوية على الفحم مع أرز" class="w-full h-40 object-cover">
                         <div class="p-4">
                             <h4 class="font-bold text-slate-800 text-sm">دجاجة كاملة مشوية على الفحم مع أرز</h4>
-                            <p class="text-slate-500 text-xs mt-1">مشوية على الفحم مع اختيارك من أرز</p>
+                            <p class="text-slate-500 text-xs mt-1">مشوية على الفحم مع اختيارك من نوع الأرز</p>
                         </div>
                     </div>
                     <div class="p-4 pt-0 flex justify-between items-center">
                         <span class="font-bold text-amber-700 text-sm">BD 5.000</span>
-                        <button onclick="addToCart('دجاجة كاملة مشوية على الفحم مع أرز', 5.000)" class="px-3 py-1.5 rounded-lg bg-amber-600 hover:bg-amber-700 text-white text-xs font-bold transition flex items-center gap-1">
+                        <button onclick="promptRiceOption('دجاجة كاملة مشوية على الفحم مع أرز', 5.000)" class="px-3 py-1.5 rounded-lg bg-amber-600 hover:bg-amber-700 text-white text-xs font-bold transition flex items-center gap-1">
                             <i class="fa-solid fa-plus"></i> إضافة
                         </button>
                     </div>
@@ -123,12 +123,12 @@
                         <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=500" alt="نصف دجاجة مشوية على الفحم مع أرز" class="w-full h-40 object-cover">
                         <div class="p-4">
                             <h4 class="font-bold text-slate-800 text-sm">نصف دجاجة مشوية على الفحم مع أرز</h4>
-                            <p class="text-slate-500 text-xs mt-1">نصف دجاجة مع اختيارك من أرز</p>
+                            <p class="text-slate-500 text-xs mt-1">نصف دجاجة مع اختيارك من نوع الأرز</p>
                         </div>
                     </div>
                     <div class="p-4 pt-0 flex justify-between items-center">
                         <span class="font-bold text-amber-700 text-sm">BD 2.500</span>
-                        <button onclick="addToCart('نصف دجاجة مشوية على الفحم مع أرز', 2.500)" class="px-3 py-1.5 rounded-lg bg-amber-600 hover:bg-amber-700 text-white text-xs font-bold transition flex items-center gap-1">
+                        <button onclick="promptRiceOption('نصف دجاجة مشوية على الفحم مع أرز', 2.500)" class="px-3 py-1.5 rounded-lg bg-amber-600 hover:bg-amber-700 text-white text-xs font-bold transition flex items-center gap-1">
                             <i class="fa-solid fa-plus"></i> إضافة
                         </button>
                     </div>
@@ -245,30 +245,165 @@
             </div>
         </div>
 
-        <!-- المقبلات والمشروبات -->
+        <!-- قسم المقبلات والسلطات -->
+        <div class="mb-12">
+            <h3 class="text-xl font-bold text-slate-800 mb-6 border-r-4 border-amber-600 pr-3">المقبلات والسلطات</h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+
+                <div class="bg-white rounded-xl border border-slate-100 p-3.5 flex justify-between items-center gap-3 shadow-sm">
+                    <div>
+                        <h4 class="font-bold text-slate-800 text-xs">فلفل أخضر حار</h4>
+                        <p class="text-slate-400 text-[10px] mt-0.5">5 قطع</p>
+                        <span class="text-amber-700 font-bold text-xs mt-1 block">BD 0.110</span>
+                    </div>
+                    <button onclick="addToCart('فلفل أخضر حار (5 قطع)', 0.110)" class="px-3 py-1.5 bg-amber-600 text-white text-xs rounded-lg font-bold">+ إضافة</button>
+                </div>
+
+                <div class="bg-white rounded-xl border border-slate-100 p-3.5 flex justify-between items-center gap-3 shadow-sm">
+                    <div>
+                        <h4 class="font-bold text-slate-800 text-xs">بصل، ليمون وفلفل حار</h4>
+                        <p class="text-slate-400 text-[10px] mt-0.5">بصل طازج مع فلفل أخضر حيوي وليمون</p>
+                        <span class="text-amber-700 font-bold text-xs mt-1 block">BD 0.150</span>
+                    </div>
+                    <button onclick="addToCart('بصل، ليمون وفلفل حار', 0.150)" class="px-3 py-1.5 bg-amber-600 text-white text-xs rounded-lg font-bold">+ إضافة</button>
+                </div>
+
+                <div class="bg-white rounded-xl border border-slate-100 p-3.5 flex justify-between items-center gap-3 shadow-sm">
+                    <div>
+                        <h4 class="font-bold text-slate-800 text-xs">خبز</h4>
+                        <p class="text-slate-400 text-[10px] mt-0.5">3 قطع</p>
+                        <span class="text-amber-700 font-bold text-xs mt-1 block">BD 0.100</span>
+                    </div>
+                    <button onclick="addToCart('خبز (3 قطع)', 0.100)" class="px-3 py-1.5 bg-amber-600 text-white text-xs rounded-lg font-bold">+ إضافة</button>
+                </div>
+
+                <div class="bg-white rounded-xl border border-slate-100 p-3.5 flex justify-between items-center gap-3 shadow-sm">
+                    <div>
+                        <h4 class="font-bold text-slate-800 text-xs">سلطة مشكلة</h4>
+                        <span class="text-amber-700 font-bold text-xs mt-1 block">BD 2.400</span>
+                    </div>
+                    <button onclick="addToCart('سلطة مشكلة', 2.400)" class="px-3 py-1.5 bg-amber-600 text-white text-xs rounded-lg font-bold">+ إضافة</button>
+                </div>
+
+                <div class="bg-white rounded-xl border border-slate-100 p-3.5 flex justify-between items-center gap-3 shadow-sm">
+                    <div>
+                        <h4 class="font-bold text-slate-800 text-xs">ورق عنب</h4>
+                        <p class="text-slate-400 text-[10px] mt-0.5">محشوة بأعشاب عطرية وأرز متبل</p>
+                        <span class="text-amber-700 font-bold text-xs mt-1 block">BD 1.200</span>
+                    </div>
+                    <button onclick="addToCart('ورق عنب', 1.200)" class="px-3 py-1.5 bg-amber-600 text-white text-xs rounded-lg font-bold">+ إضافة</button>
+                </div>
+
+                <div class="bg-white rounded-xl border border-slate-100 p-3.5 flex justify-between items-center gap-3 shadow-sm">
+                    <div>
+                        <h4 class="font-bold text-slate-800 text-xs">سلطة زبادي</h4>
+                        <span class="text-amber-700 font-bold text-xs mt-1 block">BD 1.200</span>
+                    </div>
+                    <button onclick="addToCart('سلطة زبادي', 1.200)" class="px-3 py-1.5 bg-amber-600 text-white text-xs rounded-lg font-bold">+ إضافة</button>
+                </div>
+
+                <div class="bg-white rounded-xl border border-slate-100 p-3.5 flex justify-between items-center gap-3 shadow-sm">
+                    <div>
+                        <h4 class="font-bold text-slate-800 text-xs">حمص</h4>
+                        <span class="text-amber-700 font-bold text-xs mt-1 block">BD 1.200</span>
+                    </div>
+                    <button onclick="addToCart('حمص', 1.200)" class="px-3 py-1.5 bg-amber-600 text-white text-xs rounded-lg font-bold">+ إضافة</button>
+                </div>
+
+                <div class="bg-white rounded-xl border border-slate-100 p-3.5 flex justify-between items-center gap-3 shadow-sm">
+                    <div>
+                        <h4 class="font-bold text-slate-800 text-xs">متبل</h4>
+                        <span class="text-amber-700 font-bold text-xs mt-1 block">BD 1.200</span>
+                    </div>
+                    <button onclick="addToCart('متبل', 1.200)" class="px-3 py-1.5 bg-amber-600 text-white text-xs rounded-lg font-bold">+ إضافة</button>
+                </div>
+
+                <div class="bg-white rounded-xl border border-slate-100 p-3.5 flex justify-between items-center gap-3 shadow-sm">
+                    <div>
+                        <h4 class="font-bold text-slate-800 text-xs">تبولة</h4>
+                        <span class="text-amber-700 font-bold text-xs mt-1 block">BD 1.200</span>
+                    </div>
+                    <button onclick="addToCart('تبولة', 1.200)" class="px-3 py-1.5 bg-amber-600 text-white text-xs rounded-lg font-bold">+ إضافة</button>
+                </div>
+
+                <div class="bg-white rounded-xl border border-slate-100 p-3.5 flex justify-between items-center gap-3 shadow-sm">
+                    <div>
+                        <h4 class="font-bold text-slate-800 text-xs">فتوش</h4>
+                        <span class="text-amber-700 font-bold text-xs mt-1 block">BD 1.200</span>
+                    </div>
+                    <button onclick="addToCart('فتوش', 1.200)" class="px-3 py-1.5 bg-amber-600 text-white text-xs rounded-lg font-bold">+ إضافة</button>
+                </div>
+
+                <div class="bg-white rounded-xl border border-slate-100 p-3.5 flex justify-between items-center gap-3 shadow-sm">
+                    <div>
+                        <h4 class="font-bold text-slate-800 text-xs">سلطة طرية</h4>
+                        <span class="text-amber-700 font-bold text-xs mt-1 block">BD 1.200</span>
+                    </div>
+                    <button onclick="addToCart('سلطة طرية', 1.200)" class="px-3 py-1.5 bg-amber-600 text-white text-xs rounded-lg font-bold">+ إضافة</button>
+                </div>
+
+                <div class="bg-white rounded-xl border border-slate-100 p-3.5 flex justify-between items-center gap-3 shadow-sm">
+                    <div>
+                        <h4 class="font-bold text-slate-800 text-xs">سلطة الجبن</h4>
+                        <span class="text-amber-700 font-bold text-xs mt-1 block">BD 1.200</span>
+                    </div>
+                    <button onclick="addToCart('سلطة الجبن', 1.200)" class="px-3 py-1.5 bg-amber-600 text-white text-xs rounded-lg font-bold">+ إضافة</button>
+                </div>
+
+                <div class="bg-white rounded-xl border border-slate-100 p-3.5 flex justify-between items-center gap-3 shadow-sm">
+                    <div>
+                        <h4 class="font-bold text-slate-800 text-xs">صلصة فلفل حار إضافية صغيرة</h4>
+                        <p class="text-slate-400 text-[10px] mt-0.5">قطعتان صلصة فلفل حار</p>
+                        <span class="text-amber-700 font-bold text-xs mt-1 block">BD 0.150</span>
+                    </div>
+                    <button onclick="addToCart('صلصة فلفل حار إضافية صغيرة', 0.150)" class="px-3 py-1.5 bg-amber-600 text-white text-xs rounded-lg font-bold">+ إضافة</button>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- قسم المشروبات الغازية -->
         <div>
-            <h3 class="text-xl font-bold text-slate-800 mb-6 border-r-4 border-amber-600 pr-3">المقبلات والمشروبات</h3>
+            <h3 class="text-xl font-bold text-slate-800 mb-6 border-r-4 border-amber-600 pr-3">المشروبات الغازية</h3>
             <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
 
-                <div class="bg-white rounded-xl border border-slate-100 p-3 text-center flex flex-col items-center justify-between">
-                    <h4 class="font-bold text-slate-800 text-xs mb-1">حمص</h4>
-                    <span class="text-amber-700 font-bold text-xs mb-2">BD 1.200</span>
-                    <button onclick="addToCart('حمص', 1.200)" class="w-full py-1 bg-amber-600 text-white text-xs rounded-lg font-bold">+ إضافة</button>
-                </div>
-
-                <div class="bg-white rounded-xl border border-slate-100 p-3 text-center flex flex-col items-center justify-between">
-                    <h4 class="font-bold text-slate-800 text-xs mb-1">ورق عنب</h4>
-                    <span class="text-amber-700 font-bold text-xs mb-2">BD 1.200</span>
-                    <button onclick="addToCart('ورق عنب', 1.200)" class="w-full py-1 bg-amber-600 text-white text-xs rounded-lg font-bold">+ إضافة</button>
-                </div>
-
-                <div class="bg-white rounded-xl border border-slate-100 p-3 text-center flex flex-col items-center justify-between">
-                    <h4 class="font-bold text-slate-800 text-xs mb-1">بيبسي / سفن أب</h4>
+                <div class="bg-white rounded-xl border border-slate-100 p-3 text-center flex flex-col items-center justify-between shadow-sm">
+                    <h4 class="font-bold text-slate-800 text-xs mb-1">بيبسي</h4>
                     <span class="text-amber-700 font-bold text-xs mb-2">BD 0.400</span>
-                    <button onclick="addToCart('مشروب غازي', 0.400)" class="w-full py-1 bg-amber-600 text-white text-xs rounded-lg font-bold">+ إضافة</button>
+                    <button onclick="addToCart('بيبسي', 0.400)" class="w-full py-1 bg-amber-600 text-white text-xs rounded-lg font-bold">+ إضافة</button>
                 </div>
 
-                <div class="bg-white rounded-xl border border-slate-100 p-3 text-center flex flex-col items-center justify-between">
+                <div class="bg-white rounded-xl border border-slate-100 p-3 text-center flex flex-col items-center justify-between shadow-sm">
+                    <h4 class="font-bold text-slate-800 text-xs mb-1">دايت بيبسي</h4>
+                    <span class="text-amber-700 font-bold text-xs mb-2">BD 0.400</span>
+                    <button onclick="addToCart('دايت بيبسي', 0.400)" class="w-full py-1 bg-amber-600 text-white text-xs rounded-lg font-bold">+ إضافة</button>
+                </div>
+
+                <div class="bg-white rounded-xl border border-slate-100 p-3 text-center flex flex-col items-center justify-between shadow-sm">
+                    <h4 class="font-bold text-slate-800 text-xs mb-1">سفن أب</h4>
+                    <span class="text-amber-700 font-bold text-xs mb-2">BD 0.400</span>
+                    <button onclick="addToCart('سفن أب', 0.400)" class="w-full py-1 bg-amber-600 text-white text-xs rounded-lg font-bold">+ إضافة</button>
+                </div>
+
+                <div class="bg-white rounded-xl border border-slate-100 p-3 text-center flex flex-col items-center justify-between shadow-sm">
+                    <h4 class="font-bold text-slate-800 text-xs mb-1">دايت سفن أب</h4>
+                    <span class="text-amber-700 font-bold text-xs mb-2">BD 0.400</span>
+                    <button onclick="addToCart('دايت سفن أب', 0.400)" class="w-full py-1 bg-amber-600 text-white text-xs rounded-lg font-bold">+ إضافة</button>
+                </div>
+
+                <div class="bg-white rounded-xl border border-slate-100 p-3 text-center flex flex-col items-center justify-between shadow-sm">
+                    <h4 class="font-bold text-slate-800 text-xs mb-1">حمضيات</h4>
+                    <span class="text-amber-700 font-bold text-xs mb-2">BD 0.400</span>
+                    <button onclick="addToCart('حمضيات', 0.400)" class="w-full py-1 bg-amber-600 text-white text-xs rounded-lg font-bold">+ إضافة</button>
+                </div>
+
+                <div class="bg-white rounded-xl border border-slate-100 p-3 text-center flex flex-col items-center justify-between shadow-sm">
+                    <h4 class="font-bold text-slate-800 text-xs mb-1">ميرندا برتقال</h4>
+                    <span class="text-amber-700 font-bold text-xs mb-2">BD 0.400</span>
+                    <button onclick="addToCart('ميرندا برتقال', 0.400)" class="w-full py-1 bg-amber-600 text-white text-xs rounded-lg font-bold">+ إضافة</button>
+                </div>
+
+                <div class="bg-white rounded-xl border border-slate-100 p-3 text-center flex flex-col items-center justify-between shadow-sm">
                     <h4 class="font-bold text-slate-800 text-xs mb-1">ماء</h4>
                     <span class="text-amber-700 font-bold text-xs mb-2">BD 0.200</span>
                     <button onclick="addToCart('ماء', 0.200)" class="w-full py-1 bg-amber-600 text-white text-xs rounded-lg font-bold">+ إضافة</button>
@@ -279,7 +414,43 @@
 
     </section>
 
-    <!-- Floating Sticky Cart Bar (تظهر تلقائياً للزبون عند اختيار الوجبات) -->
+    <!-- Modal اختيار نوع الأرز الإجباري -->
+    <div id="rice-modal" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden">
+        <div class="bg-white w-full max-w-sm rounded-2xl shadow-2xl p-5 border border-slate-100">
+            <h3 class="font-bold text-slate-900 text-base mb-1" id="rice-modal-title">اختر نوع الأرز</h3>
+            <p class="text-slate-500 text-xs mb-4">يرجى اختيار نوع الأرز المفضّل مع وجبتك:</p>
+            
+            <div class="space-y-2 mb-5">
+                <label class="flex items-center gap-3 p-3 rounded-xl border border-slate-200 cursor-pointer hover:bg-amber-50/50 transition">
+                    <input type="radio" name="rice-choice" value="أرز بخاري أمريكي" checked class="accent-amber-600">
+                    <span class="text-xs font-bold text-slate-800">أرز بخاري أمريكي</span>
+                </label>
+                <label class="flex items-center gap-3 p-3 rounded-xl border border-slate-200 cursor-pointer hover:bg-amber-50/50 transition">
+                    <input type="radio" name="rice-choice" value="أرز بيشاور" class="accent-amber-600">
+                    <span class="text-xs font-bold text-slate-800">أرز بيشاور</span>
+                </label>
+                <label class="flex items-center gap-3 p-3 rounded-xl border border-slate-200 cursor-pointer hover:bg-amber-50/50 transition">
+                    <input type="radio" name="rice-choice" value="أرز مندي" class="accent-amber-600">
+                    <span class="text-xs font-bold text-slate-800">أرز مندي</span>
+                </label>
+                <label class="flex items-center gap-3 p-3 rounded-xl border border-slate-200 cursor-pointer hover:bg-amber-50/50 transition">
+                    <input type="radio" name="rice-choice" value="أرز برياني" class="accent-amber-600">
+                    <span class="text-xs font-bold text-slate-800">أرز برياني</span>
+                </label>
+            </div>
+
+            <div class="flex gap-2">
+                <button onclick="confirmRiceSelection()" class="w-full py-2.5 bg-amber-600 hover:bg-amber-700 text-white rounded-xl font-bold text-xs transition">
+                    تأكيد وإضافة للسلة
+                </button>
+                <button onclick="closeRiceModal()" class="px-4 py-2.5 bg-slate-100 hover:bg-slate-200 text-slate-600 rounded-xl font-bold text-xs transition">
+                    إلغاء
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Floating Sticky Cart Bar -->
     <div id="sticky-cart-bar" class="fixed bottom-0 left-0 right-0 bg-slate-900/95 backdrop-blur text-white p-4 shadow-2xl z-40 hidden border-t border-slate-800">
         <div class="max-w-4xl mx-auto flex items-center justify-between">
             <div class="flex items-center gap-3">
@@ -295,7 +466,7 @@
         </div>
     </div>
 
-    <!-- Cart Modal (نافذة إتمام وتنسيق الطلب) -->
+    <!-- Cart Modal -->
     <div id="cart-modal" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden">
         <div class="bg-white w-full max-w-lg rounded-2xl shadow-2xl overflow-hidden flex flex-col max-h-[90vh]">
             
@@ -309,15 +480,12 @@
 
             <div class="p-4 overflow-y-auto space-y-4">
                 
-                <!-- قائمة العناصر بالسلة -->
                 <div>
                     <h4 class="font-bold text-slate-800 text-xs mb-2">الوجبات المختارة:</h4>
                     <div id="cart-items-list" class="space-y-2 max-h-40 overflow-y-auto border-b border-slate-100 pb-3">
-                        <!-- تضاف هنا العناصر برمجياً -->
                     </div>
                 </div>
 
-                <!-- نموذج تفاصيل الزبون -->
                 <div class="space-y-3 pt-2">
                     <div>
                         <label class="block text-xs font-semibold text-slate-600 mb-1">نوع الطلب</label>
@@ -358,7 +526,107 @@
         </div>
     </div>
 
-    <!-- Contact & Footer Sections -->
+    <!-- Features Section -->
+    <section id="features" class="py-16 px-4 max-w-6xl mx-auto w-full">
+        <div class="text-center mb-12">
+            <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-2">لماذا تختارنا؟</h2>
+            <p class="text-slate-500 text-sm">نقدّم أفضل الخدمات بمقاييس عالية تلبي تطلعاتك</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition">
+                <div class="w-12 h-12 rounded-xl bg-amber-50 text-amber-600 flex items-center justify-center text-xl mb-4">
+                    <i class="fa-solid fa-check-circle"></i>
+                </div>
+                <h3 class="font-bold text-slate-800 text-lg mb-2">خدمتهم سريعة</h3>
+                <p class="text-slate-500 text-xs leading-relaxed">نحرص على تقديم خدمة سريعة وفق أعلى معايير الجودة والاحترافية لضمان أفضل تجربة.</p>
+            </div>
+            <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition">
+                <div class="w-12 h-12 rounded-xl bg-amber-50 text-amber-600 flex items-center justify-center text-xl mb-4">
+                    <i class="fa-solid fa-bolt"></i>
+                </div>
+                <h3 class="font-bold text-slate-800 text-lg mb-2">نظيف</h3>
+                <p class="text-slate-500 text-xs leading-relaxed">بيئة نظيفة ومعقمة بالكامل لضمان راحتك وصحة عائلتك طوال الوقت.</p>
+            </div>
+            <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition">
+                <div class="w-12 h-12 rounded-xl bg-amber-50 text-amber-600 flex items-center justify-center text-xl mb-4">
+                    <i class="fa-solid fa-shield-halved"></i>
+                </div>
+                <h3 class="font-bold text-slate-800 text-lg mb-2">الأسعار متوسطة</h3>
+                <p class="text-slate-500 text-xs leading-relaxed">نقدم أسعاراً تنافسية ومناسبة للجميع مع الحفاظ على أعلى جودة طعام.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 px-4 bg-slate-100 border-y border-slate-200">
+        <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-8">
+            <div class="w-full md:w-1/2">
+                <div class="p-8 rounded-3xl bg-gradient-to-tr from-amber-600 to-amber-800 text-white shadow-xl relative overflow-hidden">
+                    <i class="fa-solid fa-utensils text-9xl absolute -bottom-6 -left-6 opacity-20"></i>
+                    <h3 class="text-2xl font-bold mb-4">رؤيتنا ورسالتنا</h3>
+                    <p class="text-sm text-slate-100 leading-relaxed mb-4">
+                        مطعم محمد نور في البحرين للأكل البخاري في البحرين وهو مطعم جميل ونظيف وخدمتهم سريعة.. الجلسات بالدور الثاني والاكل لذيذ وخاصة الشواية والمطعم يقع في مجمع مطاعم ومقاهي والأسعار متوسطة.
+                    </p>
+                </div>
+            </div>
+            <div class="w-full md:w-1/2">
+                <h2 class="text-2xl font-bold text-slate-900 mb-4">عن مطعم محمد نور</h2>
+                <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                    نحن متخصصون في تقديم الأكل البخاري الأصيل والمشويات الشهية. يسعى فريقنا دائماً لتقديم أطباق مميزة تترك انطباعاً لا يُنسى لدى عملائنا الكرام.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 px-4 max-w-4xl mx-auto w-full">
+        <div class="text-center mb-10">
+            <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-2">تواصل معنا</h2>
+            <p class="text-slate-500 text-sm">يسعدنا استقبال استفساراتكم والرد عليها في أي وقت</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="space-y-4">
+                <div class="flex items-center gap-4 p-4 rounded-xl bg-white border border-slate-100 shadow-sm">
+                    <div class="w-10 h-10 rounded-lg bg-amber-50 text-amber-600 flex items-center justify-center">
+                        <i class="fa-solid fa-envelope"></i>
+                    </div>
+                    <div>
+                        <span class="block text-xs text-slate-400">البريد الإلكتروني</span>
+                        <span class="text-sm font-bold text-slate-800">mohamednoorbh1@gmail.com</span>
+                    </div>
+                </div>
+
+                <div class="flex items-center gap-4 p-4 rounded-xl bg-white border border-slate-100 shadow-sm">
+                    <div class="w-10 h-10 rounded-lg bg-amber-50 text-amber-600 flex items-center justify-center">
+                        <i class="fa-solid fa-phone"></i>
+                    </div>
+                    <div>
+                        <span class="block text-xs text-slate-400">الهاتف / الواتساب</span>
+                        <span class="text-sm font-bold text-slate-800" dir="ltr">97336770206+</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Interactive Form -->
+            <form onsubmit="event.preventDefault(); alert('تم إرسال رسالتك بنجاح! شكرًا لتواصلك معنا.');" class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm space-y-3">
+                <div>
+                    <label class="block text-xs font-semibold text-slate-600 mb-1">الاسم الكامل</label>
+                    <input type="text" required placeholder="اسمك الكريم" class="w-full bg-slate-50 border border-slate-200 rounded-lg p-2 text-xs outline-none focus:border-slate-400">
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold text-slate-600 mb-1">الرسالة</label>
+                    <textarea rows="3" required placeholder="كيف يمكننا مساعدتك؟" class="w-full bg-slate-50 border border-slate-200 rounded-lg p-2 text-xs outline-none focus:border-slate-400 resize-none"></textarea>
+                </div>
+                <button type="submit" class="w-full py-2.5 text-xs font-bold text-white rounded-lg bg-gradient-to-r from-amber-600 to-amber-800 shadow-md transition">
+                    إرسال الرسالة
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer class="mt-auto bg-slate-900 text-slate-400 text-xs py-8 border-t border-slate-800">
         <div class="max-w-6xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-right">
             <div>
@@ -372,9 +640,30 @@
         </div>
     </footer>
 
-    <!-- JavaScript For Cart Operations -->
+    <!-- JavaScript For Cart & Rice Modal -->
     <script>
         let cart = [];
+        let pendingItem = null;
+
+        function promptRiceOption(name, price) {
+            pendingItem = { name: name, price: price };
+            document.getElementById('rice-modal-title').innerText = name;
+            document.getElementById('rice-modal').classList.remove('hidden');
+        }
+
+        function closeRiceModal() {
+            pendingItem = null;
+            document.getElementById('rice-modal').classList.add('hidden');
+        }
+
+        function confirmRiceSelection() {
+            if (!pendingItem) return;
+            const selectedRice = document.querySelector('input[name="rice-choice"]:checked').value;
+            const fullName = `${pendingItem.name} (${selectedRice})`;
+            
+            addToCart(fullName, pendingItem.price);
+            closeRiceModal();
+        }
 
         function addToCart(name, price) {
             const existing = cart.find(item => item.name === name);
@@ -398,7 +687,6 @@
             const totalCount = cart.reduce((sum, item) => sum + item.qty, 0);
             const totalPrice = cart.reduce((sum, item) => sum + (item.price * item.qty), 0).toFixed(3);
 
-            // Update Sticky Bar
             document.getElementById('cart-item-count').innerText = totalCount;
             document.getElementById('cart-total-price').innerText = `BD ${totalPrice}`;
             document.getElementById('modal-total-price').innerText = `BD ${totalPrice}`;
@@ -416,7 +704,6 @@
                 closeCartModal();
             }
 
-            // Render Items in Modal
             const itemsList = document.getElementById('cart-items-list');
             itemsList.innerHTML = '';
 
@@ -442,8 +729,7 @@
                 alert("السلة فارغة حالياً! قم بإضافة أطباقك المفضلة من المنيو أولاً.");
                 return;
             }
-            const modal = document.getElementById('cart-modal');
-            modal.classList.toggle('hidden');
+            document.getElementById('cart-modal').classList.toggle('hidden');
         }
 
         function closeCartModal() {
