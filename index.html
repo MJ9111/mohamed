@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>مطعم محمد نور</title>
+    <title>مطعم محمد نور - الطلب المباشر عبر الواتساب</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
@@ -11,10 +11,10 @@
         body { font-family: 'Tajawal', sans-serif; }
     </style>
 </head>
-<body class="bg-slate-50 text-slate-800 flex flex-col min-h-screen">
+<body class="bg-slate-50 text-slate-800 flex flex-col min-h-screen pb-24">
 
     <!-- Header Navigation -->
-    <header class="bg-white/90 backdrop-blur border-b border-slate-100 sticky top-0 z-50">
+    <header class="bg-white/90 backdrop-blur border-b border-slate-100 sticky top-0 z-40">
         <div class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
             <div class="flex items-center gap-3">
                 <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-amber-600 to-amber-800 flex items-center justify-center text-white shadow-md">
@@ -26,46 +26,43 @@
                 <a href="#hero" class="hover:text-amber-600 transition">الرئيسية</a>
                 <a href="#menu" class="hover:text-amber-600 transition">قائمة الطعام</a>
                 <a href="#features" class="hover:text-amber-600 transition">الميزات</a>
-                <a href="#about" class="hover:text-amber-600 transition">عن الشركة</a>
+                <a href="#about" class="hover:text-amber-600 transition">عن المطعم</a>
                 <a href="#contact" class="hover:text-amber-600 transition">تواصل معنا</a>
             </nav>
-            <div>
-                <a href="#contact" class="px-4 py-2 text-xs font-bold text-white rounded-lg bg-gradient-to-r from-amber-600 to-amber-800 hover:opacity-90 transition shadow-md">
-                    تواصل معنا
-                </a>
-            </div>
+            <button onclick="toggleCartModal()" class="relative px-4 py-2 text-xs font-bold text-white rounded-lg bg-gradient-to-r from-amber-600 to-amber-800 hover:opacity-90 transition shadow-md flex items-center gap-2">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span>السلة</span>
+                <span id="header-cart-count" class="bg-white text-amber-800 rounded-full px-1.5 py-0.5 text-[10px] font-extrabold hidden">0</span>
+            </button>
         </div>
     </header>
 
     <!-- Hero Section -->
-    <section id="hero" class="relative py-20 px-4 bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900 text-white overflow-hidden">
+    <section id="hero" class="relative py-16 px-4 bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900 text-white overflow-hidden">
         <div class="max-w-4xl mx-auto text-center relative z-10">
             <span class="inline-block px-3 py-1 rounded-full text-xs font-semibold bg-white/10 text-slate-200 border border-white/20 mb-4">
-                <i class="fa-solid fa-utensils text-amber-400 ml-1"></i> مرحباً بكم في مطعم محمد نور
+                <i class="fa-solid fa-utensils text-amber-400 ml-1"></i> أهلاً بكم في مطعم محمد نور - البحرين
             </span>
             <h1 class="text-3xl sm:text-5xl font-extrabold mb-6 leading-tight">
-                نطهو بحب <span class="bg-gradient-to-r from-amber-600 to-amber-800 bg-clip-text text-transparent">لنقدّم لك تجربة لا تُنسى</span>
+                في البحرين <span class="bg-gradient-to-r from-amber-600 to-amber-800 bg-clip-text text-transparent">طعم البخاري على أصوله .</span>
             </h1>
             <p class="text-slate-300 text-base sm:text-lg mb-8 max-w-2xl mx-auto leading-relaxed">
-                مطعم محمد نور في البحرين للأكل البخاري في البحرين وهو مطعم جميل ونظيف وخدمتهم سريعة.. الجلسات بالدور الثاني والاكل لذيذ وخاصة الشواية والمطعم يقع في مجمع مطاعم ومقاهي والأسعار متوسطة ولكن الخدمة والنظافة ممتازة رغم زحمة المطعم فإذا كنت من عشاق الاكل البخاري أو محبي الشواية فعليك بهذا المطعم المميز
+                وخيارك المثالي للمشويات والأكل البخاري اللذيذ. خدمة سريعة، نظافة تامة، وجلسات مريحة بالدور الثاني تناسب جميع الأوقات. اطلب وجبتك الآن بسهولة وسرعة من خلال السلة التفاعلية ليصلك الطلب عبر الواتساب فوراً!
             </p>
             <div class="flex flex-wrap justify-center gap-4">
-                <a href="#menu" class="px-6 py-3 rounded-xl font-bold text-white bg-gradient-to-r from-amber-600 to-amber-800 hover:shadow-lg transition transform active:scale-95">
-                    استعرض المنيو
-                </a>
-                <a href="#contact" class="px-6 py-3 rounded-xl font-bold text-slate-200 bg-white/10 hover:bg-white/20 border border-white/10 transition">
-                    تواصل معنا
+                <a href="#menu" class="px-6 py-3 rounded-xl font-bold text-white bg-gradient-to-r from-amber-600 to-amber-800 hover:shadow-lg transition transform active:scale-95 flex items-center gap-2">
+                    <i class="fa-solid fa-utensils"></i> تصفح المنيو واطلب الآن
                 </a>
             </div>
         </div>
     </section>
 
     <!-- Menu Section -->
-    <section id="menu" class="py-16 px-4 max-w-6xl mx-auto w-full">
-        <div class="text-center mb-12">
-            <span class="text-amber-600 font-bold text-xs uppercase tracking-wider block mb-1">اختر على ذوقك 🔥</span>
+    <section id="menu" class="py-12 px-4 max-w-6xl mx-auto w-full">
+        <div class="text-center mb-10">
+            <span class="text-amber-600 font-bold text-xs uppercase tracking-wider block mb-1">اختر أطباقك المفضلة 🔥</span>
             <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-2">قائمة الطعام</h2>
-            <p class="text-slate-500 text-sm">أشهى المأكولات البخارية والمشويات الطازجة</p>
+            <p class="text-slate-500 text-sm">أضف الوجبات للسلة واطلب مباشرة عبر الواتساب</p>
         </div>
 
         <!-- أطباق الدجاج مع أرز -->
@@ -73,118 +70,120 @@
             <h3 class="text-xl font-bold text-slate-800 mb-6 border-r-4 border-amber-600 pr-3">أطباق الدجاج مع الأرز</h3>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                 
-                <div class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden hover:shadow-md transition">
-                    <img src="https://images.unsplash.com/photo-1598515214211-89d3c73ae83b?w=500" alt="دجاجة كاملة بالمكينة مع أرز" class="w-full h-40 object-cover">
-                    <div class="p-4 flex flex-col justify-between h-36">
-                        <div>
+                <div class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden hover:shadow-md transition flex flex-col justify-between">
+                    <div>
+                        <img src="https://images.unsplash.com/photo-1598515214211-89d3c73ae83b?w=500" alt="دجاجة كاملة بالمكينة مع أرز" class="w-full h-40 object-cover">
+                        <div class="p-4">
                             <h4 class="font-bold text-slate-800 text-sm">دجاجة كاملة بالمكينة مع أرز</h4>
                             <p class="text-slate-500 text-xs mt-1">دجاجة كاملة مع أرز من اختيارك</p>
                         </div>
-                        <span class="font-bold text-amber-700 bg-amber-50 px-3 py-1 rounded-lg text-xs w-max mt-2">BD 4.400</span>
+                    </div>
+                    <div class="p-4 pt-0 flex justify-between items-center">
+                        <span class="font-bold text-amber-700 text-sm">BD 4.400</span>
+                        <button onclick="addToCart('دجاجة كاملة بالمكينة مع أرز', 4.400)" class="px-3 py-1.5 rounded-lg bg-amber-600 hover:bg-amber-700 text-white text-xs font-bold transition flex items-center gap-1">
+                            <i class="fa-solid fa-plus"></i> إضافة
+                        </button>
                     </div>
                 </div>
 
-                <div class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden hover:shadow-md transition">
-                    <img src="https://images.unsplash.com/photo-1598515214211-89d3c73ae83b?w=500" alt="نصف دجاجة بالماكينة مع أرز" class="w-full h-40 object-cover">
-                    <div class="p-4 flex flex-col justify-between h-36">
-                        <div>
+                <div class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden hover:shadow-md transition flex flex-col justify-between">
+                    <div>
+                        <img src="https://images.unsplash.com/photo-1598515214211-89d3c73ae83b?w=500" alt="نصف دجاجة بالماكينة مع أرز" class="w-full h-40 object-cover">
+                        <div class="p-4">
                             <h4 class="font-bold text-slate-800 text-sm">نصف دجاجة بالماكينة مع أرز</h4>
-                            <p class="text-slate-500 text-xs mt-1">نصف دجاجة بالماكينة مع اختيارك من أرز</p>
+                            <p class="text-slate-500 text-xs mt-1">نصف دجاجة مع أرز من اختيارك</p>
                         </div>
-                        <span class="font-bold text-amber-700 bg-amber-50 px-3 py-1 rounded-lg text-xs w-max mt-2">BD 2.200</span>
+                    </div>
+                    <div class="p-4 pt-0 flex justify-between items-center">
+                        <span class="font-bold text-amber-700 text-sm">BD 2.200</span>
+                        <button onclick="addToCart('نصف دجاجة بالماكينة مع أرز', 2.200)" class="px-3 py-1.5 rounded-lg bg-amber-600 hover:bg-amber-700 text-white text-xs font-bold transition flex items-center gap-1">
+                            <i class="fa-solid fa-plus"></i> إضافة
+                        </button>
                     </div>
                 </div>
 
-                <div class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden hover:shadow-md transition">
-                    <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=500" alt="دجاجة كاملة مشوية على الفحم مع أرز" class="w-full h-40 object-cover">
-                    <div class="p-4 flex flex-col justify-between h-36">
-                        <div>
+                <div class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden hover:shadow-md transition flex flex-col justify-between">
+                    <div>
+                        <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=500" alt="دجاجة كاملة مشوية على الفحم مع أرز" class="w-full h-40 object-cover">
+                        <div class="p-4">
                             <h4 class="font-bold text-slate-800 text-sm">دجاجة كاملة مشوية على الفحم مع أرز</h4>
-                            <p class="text-slate-500 text-xs mt-1">دجاجة كاملة مشوية على الفحم مع اختيارك من الارز</p>
+                            <p class="text-slate-500 text-xs mt-1">مشوية على الفحم مع اختيارك من أرز</p>
                         </div>
-                        <span class="font-bold text-amber-700 bg-amber-50 px-3 py-1 rounded-lg text-xs w-max mt-2">BD 5.000</span>
+                    </div>
+                    <div class="p-4 pt-0 flex justify-between items-center">
+                        <span class="font-bold text-amber-700 text-sm">BD 5.000</span>
+                        <button onclick="addToCart('دجاجة كاملة مشوية على الفحم مع أرز', 5.000)" class="px-3 py-1.5 rounded-lg bg-amber-600 hover:bg-amber-700 text-white text-xs font-bold transition flex items-center gap-1">
+                            <i class="fa-solid fa-plus"></i> إضافة
+                        </button>
                     </div>
                 </div>
 
-                <div class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden hover:shadow-md transition">
-                    <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=500" alt="نصف دجاجة مشوية على الفحم مع أرز" class="w-full h-40 object-cover">
-                    <div class="p-4 flex flex-col justify-between h-36">
-                        <div>
+                <div class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden hover:shadow-md transition flex flex-col justify-between">
+                    <div>
+                        <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=500" alt="نصف دجاجة مشوية على الفحم مع أرز" class="w-full h-40 object-cover">
+                        <div class="p-4">
                             <h4 class="font-bold text-slate-800 text-sm">نصف دجاجة مشوية على الفحم مع أرز</h4>
-                            <p class="text-slate-500 text-xs mt-1">نصف دجاجة مشوية على الفحم مع اختيارك أرز</p>
+                            <p class="text-slate-500 text-xs mt-1">نصف دجاجة مع اختيارك من أرز</p>
                         </div>
-                        <span class="font-bold text-amber-700 bg-amber-50 px-3 py-1 rounded-lg text-xs w-max mt-2">BD 2.500</span>
+                    </div>
+                    <div class="p-4 pt-0 flex justify-between items-center">
+                        <span class="font-bold text-amber-700 text-sm">BD 2.500</span>
+                        <button onclick="addToCart('نصف دجاجة مشوية على الفحم مع أرز', 2.500)" class="px-3 py-1.5 rounded-lg bg-amber-600 hover:bg-amber-700 text-white text-xs font-bold transition flex items-center gap-1">
+                            <i class="fa-solid fa-plus"></i> إضافة
+                        </button>
                     </div>
                 </div>
 
             </div>
         </div>
 
-        <!-- دجاج مشوي بدون أرز -->
+        <!-- أطباق مشوية بدون أرز -->
         <div class="mb-12">
             <h3 class="text-xl font-bold text-slate-800 mb-6 border-r-4 border-amber-600 pr-3">دجاج مشوي والمشويات (بدون أرز)</h3>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
 
-                <div class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden hover:shadow-md transition flex">
-                    <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=500" alt="دجاجة كاملة مشوية على الفحم" class="w-32 h-32 object-cover shrink-0">
-                    <div class="p-4 flex flex-col justify-between w-full">
-                        <div>
-                            <h4 class="font-bold text-slate-800 text-sm">دجاجة كاملة مشوية على الفحم بدون أرز</h4>
-                        </div>
-                        <span class="font-bold text-amber-700 bg-amber-50 px-3 py-1 rounded-lg text-xs w-max">BD 4.000</span>
+                <div class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden p-3 flex justify-between items-center gap-3">
+                    <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=500" class="w-20 h-20 object-cover rounded-xl shrink-0">
+                    <div class="flex-grow">
+                        <h4 class="font-bold text-slate-800 text-xs">دجاجة كاملة شواية بدون أرز</h4>
+                        <span class="font-bold text-amber-700 text-xs block mt-1">BD 4.000</span>
                     </div>
+                    <button onclick="addToCart('دجاجة كاملة شواية بدون أرز', 4.000)" class="px-3 py-1.5 rounded-lg bg-amber-600 text-white text-xs font-bold">
+                        <i class="fa-solid fa-plus"></i>
+                    </button>
                 </div>
 
-                <div class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden hover:shadow-md transition flex">
-                    <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=500" alt="نصف دجاجة مشوية على الفحم" class="w-32 h-32 object-cover shrink-0">
-                    <div class="p-4 flex flex-col justify-between w-full">
-                        <div>
-                            <h4 class="font-bold text-slate-800 text-sm">نصف دجاجة مشوية على الفحم بدون أرز</h4>
-                        </div>
-                        <span class="font-bold text-amber-700 bg-amber-50 px-3 py-1 rounded-lg text-xs w-max">BD 2.000</span>
+                <div class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden p-3 flex justify-between items-center gap-3">
+                    <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=500" class="w-20 h-20 object-cover rounded-xl shrink-0">
+                    <div class="flex-grow">
+                        <h4 class="font-bold text-slate-800 text-xs">نصف دجاجة شواية بدون أرز</h4>
+                        <span class="font-bold text-amber-700 text-xs block mt-1">BD 2.000</span>
                     </div>
+                    <button onclick="addToCart('نصف دجاجة شواية بدون أرز', 2.000)" class="px-3 py-1.5 rounded-lg bg-amber-600 text-white text-xs font-bold">
+                        <i class="fa-solid fa-plus"></i>
+                    </button>
                 </div>
 
-                <div class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden hover:shadow-md transition flex">
-                    <img src="https://images.unsplash.com/photo-1598515214211-89d3c73ae83b?w=500" alt="دجاج كامل بالماكينة" class="w-32 h-32 object-cover shrink-0">
-                    <div class="p-4 flex flex-col justify-between w-full">
-                        <div>
-                            <h4 class="font-bold text-slate-800 text-sm">دجاج كامل بالماكينة بدون أرز</h4>
-                        </div>
-                        <span class="font-bold text-amber-700 bg-amber-50 px-3 py-1 rounded-lg text-xs w-max">BD 3.400</span>
+                <div class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden p-3 flex justify-between items-center gap-3">
+                    <img src="https://images.unsplash.com/photo-1529193591184-b1d58069ecdd?w=500" class="w-20 h-20 object-cover rounded-xl shrink-0">
+                    <div class="flex-grow">
+                        <h4 class="font-bold text-slate-800 text-xs">صحن شيش طاووق</h4>
+                        <span class="font-bold text-amber-700 text-xs block mt-1">BD 2.700</span>
                     </div>
+                    <button onclick="addToCart('صحن شيش طاووق', 2.700)" class="px-3 py-1.5 rounded-lg bg-amber-600 text-white text-xs font-bold">
+                        <i class="fa-solid fa-plus"></i>
+                    </button>
                 </div>
 
-                <div class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden hover:shadow-md transition flex">
-                    <img src="https://images.unsplash.com/photo-1598515214211-89d3c73ae83b?w=500" alt="نصف دجاجة بالماكينة" class="w-32 h-32 object-cover shrink-0">
-                    <div class="p-4 flex flex-col justify-between w-full">
-                        <div>
-                            <h4 class="font-bold text-slate-800 text-sm">نصف دجاجة بالماكينة بدون أرز</h4>
-                        </div>
-                        <span class="font-bold text-amber-700 bg-amber-50 px-3 py-1 rounded-lg text-xs w-max">BD 1.700</span>
+                <div class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden p-3 flex justify-between items-center gap-3">
+                    <img src="https://images.unsplash.com/photo-1603360946369-dc9bb6258143?w=500" class="w-20 h-20 object-cover rounded-xl shrink-0">
+                    <div class="flex-grow">
+                        <h4 class="font-bold text-slate-800 text-xs">صحن كباب دجاج</h4>
+                        <span class="font-bold text-amber-700 text-xs block mt-1">BD 2.700</span>
                     </div>
-                </div>
-
-                <div class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden hover:shadow-md transition flex">
-                    <img src="https://images.unsplash.com/photo-1529193591184-b1d58069ecdd?w=500" alt="شيش طاووق" class="w-32 h-32 object-cover shrink-0">
-                    <div class="p-4 flex flex-col justify-between w-full">
-                        <div>
-                            <h4 class="font-bold text-slate-800 text-sm">شيش طاووق</h4>
-                            <p class="text-slate-500 text-xs">صحن شيش طاووق</p>
-                        </div>
-                        <span class="font-bold text-amber-700 bg-amber-50 px-3 py-1 rounded-lg text-xs w-max">BD 2.700</span>
-                    </div>
-                </div>
-
-                <div class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden hover:shadow-md transition flex">
-                    <img src="https://images.unsplash.com/photo-1603360946369-dc9bb6258143?w=500" alt="كباب دجاج" class="w-32 h-32 object-cover shrink-0">
-                    <div class="p-4 flex flex-col justify-between w-full">
-                        <div>
-                            <h4 class="font-bold text-slate-800 text-sm">كباب دجاج</h4>
-                            <p class="text-slate-500 text-xs">صحن كباب دجاج</p>
-                        </div>
-                        <span class="font-bold text-amber-700 bg-amber-50 px-3 py-1 rounded-lg text-xs w-max">BD 2.700</span>
-                    </div>
+                    <button onclick="addToCart('صحن كباب دجاج', 2.700)" class="px-3 py-1.5 rounded-lg bg-amber-600 text-white text-xs font-bold">
+                        <i class="fa-solid fa-plus"></i>
+                    </button>
                 </div>
 
             </div>
@@ -192,301 +191,174 @@
 
         <!-- الأطباق الجانبية والأرز -->
         <div class="mb-12">
-            <h3 class="text-xl font-bold text-slate-800 mb-6 border-r-4 border-amber-600 pr-3">الأطباق الجانبية والأنواع</h3>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <h3 class="text-xl font-bold text-slate-800 mb-6 border-r-4 border-amber-600 pr-3">الأطباق الجانبية والأرز</h3>
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
 
-                <div class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden hover:shadow-md transition">
-                    <img src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=500" alt="بامية" class="w-full h-32 object-cover">
-                    <div class="p-3 flex justify-between items-center">
-                        <h4 class="font-bold text-slate-800 text-xs">بامية</h4>
-                        <span class="font-bold text-amber-700 bg-amber-50 px-2.5 py-1 rounded-lg text-xs">BD 1.200</span>
-                    </div>
+                <div class="bg-white rounded-xl border border-slate-100 p-3 text-center flex flex-col items-center justify-between">
+                    <h4 class="font-bold text-slate-800 text-xs mb-1">أرز بخاري أمريكي</h4>
+                    <span class="text-amber-700 font-bold text-xs mb-2">BD 0.900</span>
+                    <button onclick="addToCart('أرز بخاري أمريكي', 0.900)" class="w-full py-1 bg-amber-600 text-white text-xs rounded-lg font-bold">+ إضافة</button>
                 </div>
 
-                <div class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden hover:shadow-md transition">
-                    <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?w=500" alt="خضروات مشكلة" class="w-full h-32 object-cover">
-                    <div class="p-3 flex justify-between items-center">
-                        <h4 class="font-bold text-slate-800 text-xs">خضروات مشكلة</h4>
-                        <span class="font-bold text-amber-700 bg-amber-50 px-2.5 py-1 rounded-lg text-xs">BD 1.200</span>
-                    </div>
+                <div class="bg-white rounded-xl border border-slate-100 p-3 text-center flex flex-col items-center justify-between">
+                    <h4 class="font-bold text-slate-800 text-xs mb-1">أرز بيشاور</h4>
+                    <span class="text-amber-700 font-bold text-xs mb-2">BD 0.900</span>
+                    <button onclick="addToCart('أرز بيشاور', 0.900)" class="w-full py-1 bg-amber-600 text-white text-xs rounded-lg font-bold">+ إضافة</button>
                 </div>
 
-                <div class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden hover:shadow-md transition">
-                    <img src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=500" alt="ملوخية" class="w-full h-32 object-cover">
-                    <div class="p-3 flex justify-between items-center">
-                        <h4 class="font-bold text-slate-800 text-xs">ملوخية</h4>
-                        <span class="font-bold text-amber-700 bg-amber-50 px-2.5 py-1 rounded-lg text-xs">BD 1.200</span>
-                    </div>
+                <div class="bg-white rounded-xl border border-slate-100 p-3 text-center flex flex-col items-center justify-between">
+                    <h4 class="font-bold text-slate-800 text-xs mb-1">أرز مندي</h4>
+                    <span class="text-amber-700 font-bold text-xs mb-2">BD 0.900</span>
+                    <button onclick="addToCart('أرز مندي', 0.900)" class="w-full py-1 bg-amber-600 text-white text-xs rounded-lg font-bold">+ إضافة</button>
                 </div>
 
-                <div class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden hover:shadow-md transition">
-                    <img src="https://images.unsplash.com/photo-1541518763669-27fef04b14ea?w=500" alt="مسقعة باللحم" class="w-full h-32 object-cover">
-                    <div class="p-3 flex justify-between items-center">
-                        <h4 class="font-bold text-slate-800 text-xs">مسقعة باللحم</h4>
-                        <span class="font-bold text-amber-700 bg-amber-50 px-2.5 py-1 rounded-lg text-xs">BD 1.200</span>
-                    </div>
+                <div class="bg-white rounded-xl border border-slate-100 p-3 text-center flex flex-col items-center justify-between">
+                    <h4 class="font-bold text-slate-800 text-xs mb-1">أرز برياني</h4>
+                    <span class="text-amber-700 font-bold text-xs mb-2">BD 0.900</span>
+                    <button onclick="addToCart('أرز برياني', 0.900)" class="w-full py-1 bg-amber-600 text-white text-xs rounded-lg font-bold">+ إضافة</button>
                 </div>
 
-                <div class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden hover:shadow-md transition">
-                    <img src="https://images.unsplash.com/photo-1633964913295-ceb43826e7c9?w=500" alt="أرز بيشاور" class="w-full h-32 object-cover">
-                    <div class="p-3 flex justify-between items-center">
-                        <h4 class="font-bold text-slate-800 text-xs">أرز بيشاور</h4>
-                        <span class="font-bold text-amber-700 bg-amber-50 px-2.5 py-1 rounded-lg text-xs">BD 0.900</span>
-                    </div>
+                <div class="bg-white rounded-xl border border-slate-100 p-3 text-center flex flex-col items-center justify-between">
+                    <h4 class="font-bold text-slate-800 text-xs mb-1">بامية</h4>
+                    <span class="text-amber-700 font-bold text-xs mb-2">BD 1.200</span>
+                    <button onclick="addToCart('بامية', 1.200)" class="w-full py-1 bg-amber-600 text-white text-xs rounded-lg font-bold">+ إضافة</button>
                 </div>
 
-                <div class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden hover:shadow-md transition">
-                    <img src="https://images.unsplash.com/photo-1633964913295-ceb43826e7c9?w=500" alt="أرز المندي" class="w-full h-32 object-cover">
-                    <div class="p-3 flex justify-between items-center">
-                        <h4 class="font-bold text-slate-800 text-xs">أرز المندي</h4>
-                        <span class="font-bold text-amber-700 bg-amber-50 px-2.5 py-1 rounded-lg text-xs">BD 0.900</span>
-                    </div>
+                <div class="bg-white rounded-xl border border-slate-100 p-3 text-center flex flex-col items-center justify-between">
+                    <h4 class="font-bold text-slate-800 text-xs mb-1">ملوخية</h4>
+                    <span class="text-amber-700 font-bold text-xs mb-2">BD 1.200</span>
+                    <button onclick="addToCart('ملوخية', 1.200)" class="w-full py-1 bg-amber-600 text-white text-xs rounded-lg font-bold">+ إضافة</button>
                 </div>
 
-                <div class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden hover:shadow-md transition">
-                    <img src="https://images.unsplash.com/photo-1633964913295-ceb43826e7c9?w=500" alt="أرز بخاري أمريكي" class="w-full h-32 object-cover">
-                    <div class="p-3 flex justify-between items-center">
-                        <h4 class="font-bold text-slate-800 text-xs">أرز بخاري أمريكي</h4>
-                        <span class="font-bold text-amber-700 bg-amber-50 px-2.5 py-1 rounded-lg text-xs">BD 0.900</span>
-                    </div>
+                <div class="bg-white rounded-xl border border-slate-100 p-3 text-center flex flex-col items-center justify-between">
+                    <h4 class="font-bold text-slate-800 text-xs mb-1">مسقعة باللحم</h4>
+                    <span class="text-amber-700 font-bold text-xs mb-2">BD 1.200</span>
+                    <button onclick="addToCart('مسقعة باللحم', 1.200)" class="w-full py-1 bg-amber-600 text-white text-xs rounded-lg font-bold">+ إضافة</button>
                 </div>
 
-                <div class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden hover:shadow-md transition">
-                    <img src="https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?w=500" alt="أرز برياني" class="w-full h-32 object-cover">
-                    <div class="p-3 flex justify-between items-center">
-                        <h4 class="font-bold text-slate-800 text-xs">أرز برياني</h4>
-                        <span class="font-bold text-amber-700 bg-amber-50 px-2.5 py-1 rounded-lg text-xs">BD 0.900</span>
-                    </div>
+                <div class="bg-white rounded-xl border border-slate-100 p-3 text-center flex flex-col items-center justify-between">
+                    <h4 class="font-bold text-slate-800 text-xs mb-1">خضروات مشكلة</h4>
+                    <span class="text-amber-700 font-bold text-xs mb-2">BD 1.200</span>
+                    <button onclick="addToCart('خضروات مشكلة', 1.200)" class="w-full py-1 bg-amber-600 text-white text-xs rounded-lg font-bold">+ إضافة</button>
                 </div>
 
             </div>
         </div>
 
-        <!-- المقبلات والسلطات -->
-        <div class="mb-12">
-            <h3 class="text-xl font-bold text-slate-800 mb-6 border-r-4 border-amber-600 pr-3">المقبلات والسلطات</h3>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-
-                <div class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden hover:shadow-md transition flex items-center p-3 gap-3">
-                    <img src="https://images.unsplash.com/photo-1541518763669-27fef04b14ea?w=500" alt="حمص" class="w-20 h-20 object-cover rounded-xl shrink-0">
-                    <div class="flex justify-between items-center w-full">
-                        <h4 class="font-bold text-slate-800 text-xs">حمص</h4>
-                        <span class="font-bold text-amber-700 bg-amber-50 px-2.5 py-1 rounded-lg text-xs">BD 1.200</span>
-                    </div>
-                </div>
-
-                <div class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden hover:shadow-md transition flex items-center p-3 gap-3">
-                    <img src="https://images.unsplash.com/photo-1541518763669-27fef04b14ea?w=500" alt="متبل" class="w-20 h-20 object-cover rounded-xl shrink-0">
-                    <div class="flex justify-between items-center w-full">
-                        <h4 class="font-bold text-slate-800 text-xs">متبل</h4>
-                        <span class="font-bold text-amber-700 bg-amber-50 px-2.5 py-1 rounded-lg text-xs">BD 1.200</span>
-                    </div>
-                </div>
-
-                <div class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden hover:shadow-md transition flex items-center p-3 gap-3">
-                    <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?w=500" alt="تبولة" class="w-20 h-20 object-cover rounded-xl shrink-0">
-                    <div class="flex justify-between items-center w-full">
-                        <h4 class="font-bold text-slate-800 text-xs">تبولة</h4>
-                        <span class="font-bold text-amber-700 bg-amber-50 px-2.5 py-1 rounded-lg text-xs">BD 1.200</span>
-                    </div>
-                </div>
-
-                <div class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden hover:shadow-md transition flex items-center p-3 gap-3">
-                    <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?w=500" alt="فتوش" class="w-20 h-20 object-cover rounded-xl shrink-0">
-                    <div class="flex justify-between items-center w-full">
-                        <h4 class="font-bold text-slate-800 text-xs">فتوش</h4>
-                        <span class="font-bold text-amber-700 bg-amber-50 px-2.5 py-1 rounded-lg text-xs">BD 1.200</span>
-                    </div>
-                </div>
-
-                <div class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden hover:shadow-md transition flex items-center p-3 gap-3">
-                    <img src="https://images.unsplash.com/photo-1488477181946-6428a0291777?w=500" alt="سلطة زبادي" class="w-20 h-20 object-cover rounded-xl shrink-0">
-                    <div class="flex justify-between items-center w-full">
-                        <h4 class="font-bold text-slate-800 text-xs">سلطة زبادي</h4>
-                        <span class="font-bold text-amber-700 bg-amber-50 px-2.5 py-1 rounded-lg text-xs">BD 1.200</span>
-                    </div>
-                </div>
-
-                <div class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden hover:shadow-md transition flex items-center p-3 gap-3">
-                    <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?w=500" alt="سلطة مشكلة" class="w-20 h-20 object-cover rounded-xl shrink-0">
-                    <div class="flex justify-between items-center w-full">
-                        <h4 class="font-bold text-slate-800 text-xs">سلطة مشكلة</h4>
-                        <span class="font-bold text-amber-700 bg-amber-50 px-2.5 py-1 rounded-lg text-xs">BD 2.400</span>
-                    </div>
-                </div>
-
-                <div class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden hover:shadow-md transition flex items-center p-3 gap-3">
-                    <img src="https://images.unsplash.com/photo-1541518763669-27fef04b14ea?w=500" alt="ورق عنب" class="w-20 h-20 object-cover rounded-xl shrink-0">
-                    <div class="flex justify-between items-center w-full">
-                        <div>
-                            <h4 class="font-bold text-slate-800 text-xs">ورق عنب</h4>
-                            <p class="text-slate-400 text-[10px]">محشوة بالأرز والأعشاب</p>
-                        </div>
-                        <span class="font-bold text-amber-700 bg-amber-50 px-2.5 py-1 rounded-lg text-xs shrink-0 mr-2">BD 1.200</span>
-                    </div>
-                </div>
-
-                <div class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden hover:shadow-md transition flex items-center p-3 gap-3">
-                    <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?w=500" alt="بصل، ليمون وفلفل حار" class="w-20 h-20 object-cover rounded-xl shrink-0">
-                    <div class="flex justify-between items-center w-full">
-                        <h4 class="font-bold text-slate-800 text-xs">بصل، ليمون وفلفل حار</h4>
-                        <span class="font-bold text-amber-700 bg-amber-50 px-2.5 py-1 rounded-lg text-xs">BD 0.150</span>
-                    </div>
-                </div>
-
-                <div class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden hover:shadow-md transition flex items-center p-3 gap-3">
-                    <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?w=500" alt="خبز" class="w-20 h-20 object-cover rounded-xl shrink-0">
-                    <div class="flex justify-between items-center w-full">
-                        <h4 class="font-bold text-slate-800 text-xs">خبز (3 قطع)</h4>
-                        <span class="font-bold text-amber-700 bg-amber-50 px-2.5 py-1 rounded-lg text-xs">BD 0.100</span>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-
-        <!-- المشروبات -->
+        <!-- المقبلات والمشروبات -->
         <div>
-            <h3 class="text-xl font-bold text-slate-800 mb-6 border-r-4 border-amber-600 pr-3">المشروبات الغازية</h3>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <h3 class="text-xl font-bold text-slate-800 mb-6 border-r-4 border-amber-600 pr-3">المقبلات والمشروبات</h3>
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
 
-                <div class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden hover:shadow-md transition p-3 flex items-center gap-3">
-                    <img src="https://images.unsplash.com/photo-1622483767028-3f66f32aef97?w=500" alt="بيبسي" class="w-16 h-16 object-cover rounded-xl shrink-0">
-                    <div class="flex justify-between items-center w-full">
-                        <h4 class="font-bold text-slate-800 text-xs">بيبسي / دايت بيبسي</h4>
-                        <span class="font-bold text-amber-700 bg-amber-50 px-2.5 py-1 rounded-lg text-xs">BD 0.400</span>
-                    </div>
+                <div class="bg-white rounded-xl border border-slate-100 p-3 text-center flex flex-col items-center justify-between">
+                    <h4 class="font-bold text-slate-800 text-xs mb-1">حمص</h4>
+                    <span class="text-amber-700 font-bold text-xs mb-2">BD 1.200</span>
+                    <button onclick="addToCart('حمص', 1.200)" class="w-full py-1 bg-amber-600 text-white text-xs rounded-lg font-bold">+ إضافة</button>
                 </div>
 
-                <div class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden hover:shadow-md transition p-3 flex items-center gap-3">
-                    <img src="https://images.unsplash.com/photo-1622483767028-3f66f32aef97?w=500" alt="سفن أب" class="w-16 h-16 object-cover rounded-xl shrink-0">
-                    <div class="flex justify-between items-center w-full">
-                        <h4 class="font-bold text-slate-800 text-xs">سفن أب / دايت سفن أب</h4>
-                        <span class="font-bold text-amber-700 bg-amber-50 px-2.5 py-1 rounded-lg text-xs">BD 0.400</span>
-                    </div>
+                <div class="bg-white rounded-xl border border-slate-100 p-3 text-center flex flex-col items-center justify-between">
+                    <h4 class="font-bold text-slate-800 text-xs mb-1">ورق عنب</h4>
+                    <span class="text-amber-700 font-bold text-xs mb-2">BD 1.200</span>
+                    <button onclick="addToCart('ورق عنب', 1.200)" class="w-full py-1 bg-amber-600 text-white text-xs rounded-lg font-bold">+ إضافة</button>
                 </div>
 
-                <div class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden hover:shadow-md transition p-3 flex items-center gap-3">
-                    <img src="https://images.unsplash.com/photo-1622483767028-3f66f32aef97?w=500" alt="حمضيات وميرندا" class="w-16 h-16 object-cover rounded-xl shrink-0">
-                    <div class="flex justify-between items-center w-full">
-                        <h4 class="font-bold text-slate-800 text-xs">حمضيات / ميرندا برتقال</h4>
-                        <span class="font-bold text-amber-700 bg-amber-50 px-2.5 py-1 rounded-lg text-xs">BD 0.400</span>
-                    </div>
+                <div class="bg-white rounded-xl border border-slate-100 p-3 text-center flex flex-col items-center justify-between">
+                    <h4 class="font-bold text-slate-800 text-xs mb-1">بيبسي / سفن أب</h4>
+                    <span class="text-amber-700 font-bold text-xs mb-2">BD 0.400</span>
+                    <button onclick="addToCart('مشروب غازي', 0.400)" class="w-full py-1 bg-amber-600 text-white text-xs rounded-lg font-bold">+ إضافة</button>
                 </div>
 
-                <div class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden hover:shadow-md transition p-3 flex items-center gap-3">
-                    <img src="https://images.unsplash.com/photo-1548839140-29a749e1bc4e?w=500" alt="ماء" class="w-16 h-16 object-cover rounded-xl shrink-0">
-                    <div class="flex justify-between items-center w-full">
-                        <h4 class="font-bold text-slate-800 text-xs">ماء</h4>
-                        <span class="font-bold text-amber-700 bg-amber-50 px-2.5 py-1 rounded-lg text-xs">BD 0.200</span>
-                    </div>
+                <div class="bg-white rounded-xl border border-slate-100 p-3 text-center flex flex-col items-center justify-between">
+                    <h4 class="font-bold text-slate-800 text-xs mb-1">ماء</h4>
+                    <span class="text-amber-700 font-bold text-xs mb-2">BD 0.200</span>
+                    <button onclick="addToCart('ماء', 0.200)" class="w-full py-1 bg-amber-600 text-white text-xs rounded-lg font-bold">+ إضافة</button>
                 </div>
 
             </div>
         </div>
+
     </section>
 
-    <!-- Features Section -->
-    <section id="features" class="py-16 px-4 max-w-6xl mx-auto w-full">
-        <div class="text-center mb-12">
-            <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-2">لماذا تختارنا؟</h2>
-            <p class="text-slate-500 text-sm">نقدّم أفضل الخدمات بمقاييس عالية تلبي تطلعاتك</p>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition">
-                <div class="w-12 h-12 rounded-xl bg-amber-50 text-amber-600 flex items-center justify-center text-xl mb-4">
-                    <i class="fa-solid fa-check-circle"></i>
-                </div>
-                <h3 class="font-bold text-slate-800 text-lg mb-2">خدمتهم سريعة</h3>
-                <p class="text-slate-500 text-xs leading-relaxed">نحرص على تقديم خدمة سريعة وفق أعلى معايير الجودة والاحترافية لضمان أفضل تجربة.</p>
-            </div>
-            <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition">
-                <div class="w-12 h-12 rounded-xl bg-amber-50 text-amber-600 flex items-center justify-center text-xl mb-4">
-                    <i class="fa-solid fa-bolt"></i>
-                </div>
-                <h3 class="font-bold text-slate-800 text-lg mb-2">نظيف</h3>
-                <p class="text-slate-500 text-xs leading-relaxed">بيئة نظيفة ومعقمة بالكامل لضمان راحتك وصحة عائلتك طوال الوقت.</p>
-            </div>
-            <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition">
-                <div class="w-12 h-12 rounded-xl bg-amber-50 text-amber-600 flex items-center justify-center text-xl mb-4">
-                    <i class="fa-solid fa-shield-halved"></i>
-                </div>
-                <h3 class="font-bold text-slate-800 text-lg mb-2">الأسعار متوسطة</h3>
-                <p class="text-slate-500 text-xs leading-relaxed">نقدم أسعاراً تنافسية ومناسبة للجميع مع الحفاظ على أعلى جودة طعام.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="py-16 px-4 bg-slate-100 border-y border-slate-200">
-        <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-8">
-            <div class="w-full md:w-1/2">
-                <div class="p-8 rounded-3xl bg-gradient-to-tr from-amber-600 to-amber-800 text-white shadow-xl relative overflow-hidden">
-                    <i class="fa-solid fa-utensils text-9xl absolute -bottom-6 -left-6 opacity-20"></i>
-                    <h3 class="text-2xl font-bold mb-4">رؤيتنا ورسالتنا</h3>
-                    <p class="text-sm text-slate-100 leading-relaxed mb-4">
-                        مطعم محمد نور في البحرين للأكل البخاري في البحرين وهو مطعم جميل ونظيف وخدمتهم سريعة.. الجلسات بالدور الثاني والاكل لذيذ وخاصة الشواية والمطعم يقع في مجمع مطاعم ومقاهي والأسعار متوسطة.
-                    </p>
-                </div>
-            </div>
-            <div class="w-full md:w-1/2">
-                <h2 class="text-2xl font-bold text-slate-900 mb-4">عن مطعم محمد نور</h2>
-                <p class="text-slate-600 text-sm leading-relaxed mb-6">
-                    نحن متخصصون في تقديم الأكل البخاري الأصيل والمشويات الشهية. يسعى فريقنا دائماً لتقديم أطباق مميزة تترك انطباعاً لا يُنسى لدى عملائنا الكرام.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="py-16 px-4 max-w-4xl mx-auto w-full">
-        <div class="text-center mb-10">
-            <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-2">تواصل معنا</h2>
-            <p class="text-slate-500 text-sm">يسعدنا استقبال استفساراتكم والرد عليها في أي وقت</p>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div class="space-y-4">
-                <div class="flex items-center gap-4 p-4 rounded-xl bg-white border border-slate-100 shadow-sm">
-                    <div class="w-10 h-10 rounded-lg bg-amber-50 text-amber-600 flex items-center justify-center">
-                        <i class="fa-solid fa-envelope"></i>
-                    </div>
-                    <div>
-                        <span class="block text-xs text-slate-400">البريد الإلكتروني</span>
-                        <span class="text-sm font-bold text-slate-800">mohamednoorbh1@gmail.com</span>
-                    </div>
-                </div>
-
-                <div class="flex items-center gap-4 p-4 rounded-xl bg-white border border-slate-100 shadow-sm">
-                    <div class="w-10 h-10 rounded-lg bg-amber-50 text-amber-600 flex items-center justify-center">
-                        <i class="fa-solid fa-phone"></i>
-                    </div>
-                    <div>
-                        <span class="block text-xs text-slate-400">الهاتف / الواتساب</span>
-                        <span class="text-sm font-bold text-slate-800" dir="ltr">97366665377+</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Interactive Form -->
-            <form onsubmit="event.preventDefault(); alert('تم إرسال رسالتك بنجاح! شكرًا لتواصلك معنا.');" class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm space-y-3">
+    <!-- Floating Sticky Cart Bar (تظهر تلقائياً للزبون عند اختيار الوجبات) -->
+    <div id="sticky-cart-bar" class="fixed bottom-0 left-0 right-0 bg-slate-900/95 backdrop-blur text-white p-4 shadow-2xl z-40 hidden border-t border-slate-800">
+        <div class="max-w-4xl mx-auto flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-amber-600 flex items-center justify-center font-bold text-sm" id="cart-item-count">0</div>
                 <div>
-                    <label class="block text-xs font-semibold text-slate-600 mb-1">الاسم الكامل</label>
-                    <input type="text" required placeholder="اسمك الكريم" class="w-full bg-slate-50 border border-slate-200 rounded-lg p-2 text-xs outline-none focus:border-slate-400">
+                    <span class="text-xs text-slate-400 block">إجمالي الطلب</span>
+                    <span class="text-base font-bold text-amber-400" id="cart-total-price">BD 0.000</span>
                 </div>
+            </div>
+            <button onclick="toggleCartModal()" class="px-5 py-2.5 bg-gradient-to-r from-emerald-500 to-emerald-600 hover:from-emerald-600 hover:to-emerald-700 text-white rounded-xl font-bold text-xs flex items-center gap-2 shadow-lg transition">
+                <i class="fa-brands fa-whatsapp text-base"></i> إتمام الطلب عبر الواتساب
+            </button>
+        </div>
+    </div>
+
+    <!-- Cart Modal (نافذة إتمام وتنسيق الطلب) -->
+    <div id="cart-modal" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden">
+        <div class="bg-white w-full max-w-lg rounded-2xl shadow-2xl overflow-hidden flex flex-col max-h-[90vh]">
+            
+            <div class="bg-slate-900 text-white p-4 flex justify-between items-center">
+                <div class="flex items-center gap-2">
+                    <i class="fa-brands fa-whatsapp text-emerald-400 text-xl"></i>
+                    <h3 class="font-bold text-sm">مراجعة وإرسال الطلب</h3>
+                </div>
+                <button onclick="toggleCartModal()" class="text-slate-400 hover:text-white text-lg"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+
+            <div class="p-4 overflow-y-auto space-y-4">
+                
+                <!-- قائمة العناصر بالسلة -->
                 <div>
-                    <label class="block text-xs font-semibold text-slate-600 mb-1">الرسالة</label>
-                    <textarea rows="3" required placeholder="كيف يمكننا مساعدتك؟" class="w-full bg-slate-50 border border-slate-200 rounded-lg p-2 text-xs outline-none focus:border-slate-400 resize-none"></textarea>
+                    <h4 class="font-bold text-slate-800 text-xs mb-2">الوجبات المختارة:</h4>
+                    <div id="cart-items-list" class="space-y-2 max-h-40 overflow-y-auto border-b border-slate-100 pb-3">
+                        <!-- تضاف هنا العناصر برمجياً -->
+                    </div>
                 </div>
-                <button type="submit" class="w-full py-2.5 text-xs font-bold text-white rounded-lg bg-gradient-to-r from-amber-600 to-amber-800 shadow-md transition">
-                    إرسال الرسالة
+
+                <!-- نموذج تفاصيل الزبون -->
+                <div class="space-y-3 pt-2">
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-600 mb-1">نوع الطلب</label>
+                        <select id="order-type" class="w-full bg-slate-50 border border-slate-200 rounded-lg p-2 text-xs outline-none">
+                            <option value="توصيل للمنزل">توصيل للمنزل</option>
+                            <option value="استلام من الفرع / سفري">استلام من الفرع / سفري</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-600 mb-1">الاسم الكامل *</label>
+                        <input type="text" id="cust-name" required placeholder="أدخل اسمك الكريم" class="w-full bg-slate-50 border border-slate-200 rounded-lg p-2 text-xs outline-none focus:border-amber-600">
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-600 mb-1">رقم الهاتف *</label>
+                        <input type="tel" id="cust-phone" required placeholder="مثال: 33xxxxxx" class="w-full bg-slate-50 border border-slate-200 rounded-lg p-2 text-xs outline-none focus:border-amber-600">
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-600 mb-1">العنوان / ملاحظات الإعداد</label>
+                        <textarea id="cust-address" rows="2" placeholder="المنطقة، المجمع، الشارع، أو ملاحظات خاصة على الأكل..." class="w-full bg-slate-50 border border-slate-200 rounded-lg p-2 text-xs outline-none focus:border-amber-600 resize-none"></textarea>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="p-4 border-t border-slate-100 bg-slate-50 flex flex-col gap-2">
+                <div class="flex justify-between items-center mb-1">
+                    <span class="text-xs text-slate-600 font-bold">المجموع الكلي:</span>
+                    <span class="text-base font-extrabold text-amber-700" id="modal-total-price">BD 0.000</span>
+                </div>
+                <button onclick="sendOrderToWhatsApp()" class="w-full py-3 bg-emerald-600 hover:bg-emerald-700 text-white rounded-xl font-bold text-xs flex items-center justify-center gap-2 shadow-md transition">
+                    <i class="fa-brands fa-whatsapp text-lg"></i> إرسال الطلب عبر الواتساب الآن
                 </button>
-            </form>
-        </div>
-    </section>
+            </div>
 
-    <!-- Footer -->
+        </div>
+    </div>
+
+    <!-- Contact & Footer Sections -->
     <footer class="mt-auto bg-slate-900 text-slate-400 text-xs py-8 border-t border-slate-800">
         <div class="max-w-6xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-right">
             <div>
@@ -494,12 +366,124 @@
                 <p>جميع الحقوق محفوظة © 2026</p>
             </div>
             <div class="flex gap-4 text-base">
-                <a href="#" class="hover:text-white transition"><i class="fa-brands fa-twitter"></i></a>
+                <a href="https://wa.me/97366665377" class="hover:text-emerald-400 transition"><i class="fa-brands fa-whatsapp"></i></a>
                 <a href="#" class="hover:text-white transition"><i class="fa-brands fa-instagram"></i></a>
-                <a href="#" class="hover:text-white transition"><i class="fa-brands fa-linkedin"></i></a>
             </div>
         </div>
     </footer>
 
+    <!-- JavaScript For Cart Operations -->
+    <script>
+        let cart = [];
+
+        function addToCart(name, price) {
+            const existing = cart.find(item => item.name === name);
+            if (existing) {
+                existing.qty += 1;
+            } else {
+                cart.push({ name: name, price: price, qty: 1 });
+            }
+            updateCartUI();
+        }
+
+        function changeQty(index, delta) {
+            cart[index].qty += delta;
+            if (cart[index].qty <= 0) {
+                cart.splice(index, 1);
+            }
+            updateCartUI();
+        }
+
+        function updateCartUI() {
+            const totalCount = cart.reduce((sum, item) => sum + item.qty, 0);
+            const totalPrice = cart.reduce((sum, item) => sum + (item.price * item.qty), 0).toFixed(3);
+
+            // Update Sticky Bar
+            document.getElementById('cart-item-count').innerText = totalCount;
+            document.getElementById('cart-total-price').innerText = `BD ${totalPrice}`;
+            document.getElementById('modal-total-price').innerText = `BD ${totalPrice}`;
+
+            const stickyBar = document.getElementById('sticky-cart-bar');
+            const headerCount = document.getElementById('header-cart-count');
+
+            if (totalCount > 0) {
+                stickyBar.classList.remove('hidden');
+                headerCount.classList.remove('hidden');
+                headerCount.innerText = totalCount;
+            } else {
+                stickyBar.classList.add('hidden');
+                headerCount.classList.add('hidden');
+                closeCartModal();
+            }
+
+            // Render Items in Modal
+            const itemsList = document.getElementById('cart-items-list');
+            itemsList.innerHTML = '';
+
+            cart.forEach((item, index) => {
+                itemsList.innerHTML += `
+                    <div class="flex justify-between items-center bg-slate-50 p-2.5 rounded-lg border border-slate-100">
+                        <div>
+                            <span class="font-bold text-slate-800 text-xs block">${item.name}</span>
+                            <span class="text-amber-700 font-bold text-[11px]">BD ${(item.price * item.qty).toFixed(3)}</span>
+                        </div>
+                        <div class="flex items-center gap-2 bg-white px-2 py-1 rounded-lg border border-slate-200">
+                            <button onclick="changeQty(${index}, -1)" class="text-red-500 font-bold px-1 text-xs">-</button>
+                            <span class="text-xs font-bold w-4 text-center">${item.qty}</span>
+                            <button onclick="changeQty(${index}, 1)" class="text-emerald-600 font-bold px-1 text-xs">+</button>
+                        </div>
+                    </div>
+                `;
+            });
+        }
+
+        function toggleCartModal() {
+            if (cart.length === 0) {
+                alert("السلة فارغة حالياً! قم بإضافة أطباقك المفضلة من المنيو أولاً.");
+                return;
+            }
+            const modal = document.getElementById('cart-modal');
+            modal.classList.toggle('hidden');
+        }
+
+        function closeCartModal() {
+            document.getElementById('cart-modal').classList.add('hidden');
+        }
+
+        function sendOrderToWhatsApp() {
+            const name = document.getElementById('cust-name').value.trim();
+            const phone = document.getElementById('cust-phone').value.trim();
+            const orderType = document.getElementById('order-type').value;
+            const address = document.getElementById('cust-address').value.trim();
+
+            if (!name || !phone) {
+                alert("يرجى ملء الاسم الكامل ورقم الهاتف المباشر لإكمال الطلب.");
+                return;
+            }
+
+            let text = `*طلب جديد من موقع مطعم محمد نور* 🍽️\n`;
+            text += `---------------------------------\n`;
+            text += `👤 *الاسم:* ${name}\n`;
+            text += `📞 *الهاتف:* ${phone}\n`;
+            text += `🛵 *نوع الطلب:* ${orderType}\n`;
+            if (address) text += `📍 *العنوان / ملاحظات:* ${address}\n`;
+            text += `---------------------------------\n`;
+            text += `📋 *الوجبات المطلوبة:*\n`;
+
+            cart.forEach((item, i) => {
+                text += `${i+1}. ${item.name} (عدد: ${item.qty}) - BD ${(item.price * item.qty).toFixed(3)}\n`;
+            });
+
+            const totalPrice = cart.reduce((sum, item) => sum + (item.price * item.qty), 0).toFixed(3);
+            text += `---------------------------------\n`;
+            text += `💰 *المجموع الإجمالي:* BD ${totalPrice}\n`;
+            text += `شكراً لكم!`;
+
+            const restaurantNumber = "97366665377";
+            const whatsappUrl = `https://wa.me/${restaurantNumber}?text=${encodeURIComponent(text)}`;
+
+            window.open(whatsappUrl, '_blank');
+        }
+    </script>
 </body>
 </html>
